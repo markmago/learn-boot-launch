@@ -19,11 +19,12 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class Article {
+    @JsonIgnore
     private Long  id;
     private String author;
     private String title;
     private String content;
-    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
     private Date createTime;
     private List<Reader> lstReader;
 }
